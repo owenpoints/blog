@@ -2,10 +2,8 @@
 
 python3 script.py
 
-echo exit | python3 script.py
-
 git add .
 
-git commit -m "Updating Points"
+git commit -m "Updating Blog"
 
 git push -f
