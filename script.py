@@ -2,6 +2,10 @@ import os
 import ast
 import datetime
 
+user = open('username.txt', 'r')
+username = user.read()
+user.close()
+
 def show_posts(store):
     for i in store:
         print(f"{i}: {store[i]}")
@@ -59,7 +63,7 @@ while True:
         posts = temp
 
     elif choice == "post":
-        posts[len(posts)] =  str(datetime.datetime.now()) + ": " + input("Input post contents: ")
+        posts[len(posts)] =  f'{datetime.datetime.now()} \| {username}: {input("Input post contents: ")}'
     
     elif choice == "list":
         show_posts(posts)

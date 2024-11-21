@@ -1,5 +1,3 @@
 # Top Owen Updates
-2024-11-21 18:32:50.054821: my when pooopies
-
-2024-11-21 18:35:00.900211: who even is this guy
+2024-11-21 18:40:22.061276 \| Owen Bridges: me when pooopies
 
