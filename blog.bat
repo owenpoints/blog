@@ -1,6 +1,6 @@
 @echo off
 
-REM python3 script.py
+python3 script.py
 
 git add .
 
