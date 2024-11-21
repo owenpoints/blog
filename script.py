@@ -2,11 +2,15 @@ import os
 import ast
 import datetime
 
+def show_posts(store):
+    for i in store:
+        print(f"{i}: {store[i]}")
+
 def output(store):
 
     file = open('README.md', 'w')
 
-    output_str = ""
+    output_str = "# Top Owen Updates\n"
     
     for i, item in enumerate(store):
         output_str += f"{store[item]}\n\n"
@@ -27,7 +31,7 @@ posts = ast.literal_eval(store.read())
 
 while True:
 
-    options = ("post", "delete", "exit")
+    options = ("post", "delete", "list", "exit")
     while True:
         choice = input(f"Input operation {options}: ")
         if choice in options:
@@ -37,18 +41,29 @@ while True:
     if choice == "exit":
         break
     elif choice == "delete":
+        
+        show_posts(posts)
 
         while True:
-            remove_choice = input("Input post to remove: ")
+            remove_choice = int(input("Input post to remove: "))
             if remove_choice in posts:
                 break
             print("Enter Valid option.")
 
         posts.pop(remove_choice)
+
+        temp = {}
+        for i, item in enumerate(posts):
+            temp[i] = posts[item]
         
+        posts = temp
 
     elif choice == "post":
-        posts[len(posts) + 1] =  str(datetime.datetime.now()) + ": " + input("Input post contents: ")
+        posts[len(posts)] =  str(datetime.datetime.now()) + ": " + input("Input post contents: ")
+    
+    elif choice == "list":
+        show_posts(posts)
+        os.system("pause")
         
     os.system("cls")
 
