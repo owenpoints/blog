@@ -8,7 +8,7 @@ user.close()
 
 def show_posts(store):
     for i in store:
-        print(f"{i}: {store[i]}")
+        print(f"{i}: {store[i].split("::")[1]}")
 
 def output(store):
 
@@ -82,7 +82,13 @@ while True:
                 break
             print("That title already exists.")
 
-        posts[title] =  f'{datetime.datetime.now()} \| {username}:: {input("Input post contents: ")}'
+        while True:
+            contents = input("Input post contents: ")
+            if not "::" in contents:
+                break
+            print("Post cannot contain '::'.")
+
+        posts[title] =  f'{datetime.datetime.now()} \| {username}:: {contents}'
     
     elif choice == "list":
         show_posts(posts)
