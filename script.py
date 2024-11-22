@@ -8,9 +8,11 @@ user.close()
 
 def show_posts(store):
     for i in store:
-        print(f'{i}:{store[i].split("::")[1]}')
+        print(f'{i}:{store[i].split("|")[2]}')
 
 def output(store):
+
+    store = dict(reversed(list(store.items())))
 
     os.system("del posts\*.md")
 
@@ -21,10 +23,10 @@ def output(store):
     output_str = "# Top Owen Updates\n"
     
     for i, item in enumerate(store):
-        output_str += f'{store[item].split("::")[0]} [{item}](./posts/{i}.md)\n\n'
+        output_str += f'{store[item].split("|")[0] + "|" + store[item].split("|")[1]}| [{item}](./posts/{i}.md)\n\n'
 
         temp = open(f'posts\{i}.md', 'w')
-        temp.write(f'{store[item]} \n\n Click [Here](../) to Go Back')
+        temp.write(f'# {item}\n{store[item]} \n\n Click [Here](../) to Go Back')
         temp.close()
         
 
@@ -61,18 +63,12 @@ while True:
         show_posts(posts)
 
         while True:
-            remove_choice = int(input("Input post to remove: "))
+            remove_choice = input("Input post to remove: ")
             if remove_choice in posts:
                 break
             print("Enter Valid option.")
 
         posts.pop(remove_choice)
-
-        temp = {}
-        for i, item in enumerate(posts):
-            temp[i] = posts[item]
-        
-        posts = temp
 
     elif choice == "post":
 
@@ -84,11 +80,11 @@ while True:
 
         while True:
             contents = input("Input post contents: ")
-            if not "::" in contents:
+            if not "\|" in contents:
                 break
-            print("Post cannot contain '::'.")
+            print("Post cannot contain '\|' (backslash pipeline).")
 
-        posts[title] =  f'{datetime.datetime.now()} \| {username}:: {contents}'
+        posts[title] =  f'{datetime.datetime.now()} \| {username} \| {contents}'
     
     elif choice == "list":
         show_posts(posts)
