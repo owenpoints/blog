@@ -1,5 +1,7 @@
 # Top Owen Updates
 ### [Back](https://owenpoints.github.io) to Owen Points Leaderboard
+2024-11-22 10:02:10.181217 \| Owen Bridges \| [added option to edit names in owen points client](./posts/added option to edit names in owen points client.md)
+
 2024-11-22 08:48:43.221200 \| Owen Bridges \| [math test](./posts/math test.md)
 
 2024-11-21 21:50:34.460501 \| Owen Bridges \| [ten minutes later](./posts/ten minutes later.md)
