@@ -44,7 +44,7 @@ posts = ast.literal_eval(store.read())
 
 while True:
 
-    options = ("post", "delete", "list", "read post", "exit")
+    options = ("post", "delete", "list", "read", "exit")
     while True:
         choice = input(f"Input operation {options}: ").strip()
         if choice in options:
@@ -91,7 +91,7 @@ while True:
         show_posts(posts)
         pause()
     
-    elif choice == "readpost":
+    elif choice == "read":
         show_posts(posts)        
         
         while True:

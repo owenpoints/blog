@@ -1,5 +1,7 @@
 # Top Owen Updates
 ### [Back](https://owenpoints.github.io) to Owen Points Leaderboard
+2024-11-22 17:32:33.173551 \| Owen Bridges \| [updated blog client and batch files for points + blog](./posts/updated blog client and batch files for points + blog.md)
+
 2024-11-22 17:27:40.011284 \| Owen Bridges \| [added update.bat](./posts/added update.bat.md)
 
 2024-11-22 17:19:50.373995 \| Owen Bridges \| [owen points bounty](./posts/owen points bounty.md)

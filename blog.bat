@@ -2,4 +2,4 @@
 
 python3 script.py
 
-update.bat
+push.bat
