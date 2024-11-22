@@ -1,5 +1,7 @@
 # Top Owen Updates
 ### [Back](https://owenpoints.github.io) to Owen Points Leaderboard
+2024-11-22 17:16:23.061259 \| Owen Bridges \| [updated owenpoints client](./posts/updated owenpoints client.md)
+
 2024-11-22 17:13:34.466483 \| Owen Bridges \| [updated README.md of owenpoints](./posts/updated README.md of owenpoints.md)
 
 2024-11-22 17:12:28.470922 \| Owen Bridges \| [updated owenpoints.bat](./posts/updated owenpoints.bat.md)
