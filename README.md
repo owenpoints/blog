@@ -1,3 +1,4 @@
+### [Back](https://owenpoints.github.io) to Owen Points Leaderboard 
 # Top Owen Updates
 2024-11-21 20:42:13.234913 \| Owen Bridges \| [made blog links persistent](./posts/made blog links persistent.md)
 
