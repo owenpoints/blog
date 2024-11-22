@@ -12,12 +12,24 @@ def show_posts(store):
 
 def output(store):
 
+    os.system("del posts\*.md")
+
+
+
     file = open('README.md', 'w')
 
     output_str = "# Top Owen Updates\n"
     
     for i, item in enumerate(store):
-        output_str += f"{store[item]}\n\n"
+        output_str += f'{store[item].split("::")[0]} [{item}](./posts/{i}.md)\n\n'
+
+        temp = open(f'posts\{i}.md', 'w')
+        temp.write(f'{store[item]} \n\n Click [Here](../) to Go Back')
+        temp.close()
+        
+
+
+
 
     file.write(output_str)
     file.close()
@@ -63,7 +75,14 @@ while True:
         posts = temp
 
     elif choice == "post":
-        posts[len(posts)] =  f'{datetime.datetime.now()} \| {username}: {input("Input post contents: ")}'
+
+        while True:
+            title = input("Input title of post: ")
+            if title not in posts:
+                break
+            print("That title already exists.")
+
+        posts[title] =  f'{datetime.datetime.now()} \| {username}:: {input("Input post contents: ")}'
     
     elif choice == "list":
         show_posts(posts)
