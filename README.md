@@ -1,5 +1,9 @@
 # Top Owen Updates
 ### [Back](https://owenpoints.github.io) to Owen Points Leaderboard
+2024-11-22 17:13:34.466483 \| Owen Bridges \| [updated README.md of owenpoints](./posts/updated README.md of owenpoints.md)
+
+2024-11-22 17:12:28.470922 \| Owen Bridges \| [updated owenpoints.bat](./posts/updated owenpoints.bat.md)
+
 2024-11-22 11:58:14.925754 \| Owen Bridges \| [removed option to edit posts in blogging client](./posts/removed option to edit posts in blogging client.md)
 
 2024-11-22 10:35:48.807649 \| Owen Bridges \| [added option to edit posts in blogging client](./posts/added option to edit posts in blogging client.md)
