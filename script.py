@@ -8,7 +8,7 @@ user.close()
 
 def show_posts(store):
     for i in store:
-        print(f"{i}: {store[i].split("::")[1]}")
+        print(f'{i}: {store[i].split("::")[1]}')
 
 def output(store):
 
